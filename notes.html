@@ -1,0 +1,277 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NOTES</title>
+  <style>
+
+   /* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Full-page dark blue background + center everything */
+body {
+  background-color: #09093a;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Centered box - responsive */
+.box {
+  width: 100%;
+  max-width: 900px;
+  min-height: 500px;
+  max-height: 700px;
+  padding: 20px;
+  border: 5px outset rgb(226, 76, 34);
+  background-color: rgb(230, 177, 107);
+  color: black;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+/* Responsive table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 20px;
+  min-height: 350px;
+}
+
+th, td {
+  border: 2px solid green;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #f0f0f0;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+  word-break: break-word;
+}
+
+/* Responsive text */
+h1 {
+  font-size: 32px;
+  line-height: 1.3;
+  margin-bottom: 15px;
+}
+
+/* Mobile-friendly layout */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  th, td {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .box {
+    padding: 15px;
+  }
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  padding: 0px 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #040427;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  background-color: #040427;
+}
+
+.logo-img {
+  width: 100%;
+  max-width: 200px;
+  height: 70%;
+  max-height: 65px;
+}
+
+.logo-img-small {
+  width: 100%;
+  max-width: 65px;
+  height: auto;
+}
+
+.menu {
+  display: flex;
+  padding-top: 15px;
+  background-color: #040427;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.menu ul {
+  display: flex;
+  gap: 70px;
+  list-style: none;
+  background-color: #040427;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #e04693;
+  background-color: #040427;
+  font-weight: bold;
+  font-size: 30px;
+  transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+  color: #ff7200;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  position: relative;
+}
+
+.hamburger div {
+  width: 40px;
+  height: 4px;
+  background-color: #e04693;
+}
+
+/* Responsive layout */
+@media (max-width: 1030px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 68px;
+  }
+
+  .menu {
+    display: none;
+    width: 30%;
+    flex-direction: column;
+    align-items: center;
+    background-color: #040427;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menu ul li a {
+    font-size: 30px;
+  }
+
+  .hamburger {
+    display: flex;
+    align-self: flex-end;
+    margin-top: 20px;
+  }
+
+  .logo-img {
+    max-width: 200px;
+  }
+
+  .logo-img-small {
+    max-width: 60px;
+  }
+}
+  </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="icon">
+            <img src="name.png" alt="Kishan Kumar Logo" class="logo-img" style="width: 300px; height: 70px;"/>
+            <img src="new_image.png" alt="logo" class="logo-img-small" />
+        </div>
+        <div class="menu" id="mobileMenu">
+            <ul>
+                <li><a href="http://127.0.0.1:5500/html/notes.html" target="_blank">NOTES</a></li>
+                <li><a href="https://www.scribd.com/" target="_blank">BOOKS</a></li>
+                <li><a href="#">LECTURES</a></li>
+                <li><a href="#">PYQs</a></li>
+                <li><a href="#">COURSE</a></li>
+            </ul>
+        </div>
+   
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <div class="box">
+        <h1>📚 Even Semester (2nd, 4th, 6th) Notes, PYQ, MCQ, Practical 📚</h1>
+
+    <table>
+      <tr>
+        <th style="font-size: 28px;">Branch</th>
+        <th style="font-size: 24px;">📖 Notes | ❓ PYQ | ✅ MCQ | 🛠 Practical</th>
+      </tr>
+      <tr>
+        <td>💻 CSE (Computer Science & Engineering):</td>
+        <td><a href="https://drive.google.com/file/d/1_K48PV8PCWw8U323XDoQ1jSqzYuwY32j/view?usp=drivesdk" target="_blank">LINK HERE 🔗</a></td>
+      </tr>
+      <tr>
+        <td>⚡ Electronics Engineering:</td>
+        <td><a href="https://drive.google.com/file/d/1_G9wBKVmKenZWq1RVoXE7X6zBgfcX_u-/view?usp=drivesdk" target="_blank">LINK HERE 🔗</a></td>
+      </tr>
+      <tr>
+        <td>🔌 Electrical Engineering:</td>
+        <td><a href="https://drive.google.com/file/d/1_JXZMPwvAkCsfyAJRH_2QQLUJQ1B1uts/view?usp=drivesdk" target="_blank">LINK HERE 🔗</a></td>
+      </tr>
+      <tr>
+        <td>🛠 Mechanical Engineering:</td>
+        <td><a href="https://drive.google.com/file/d/1_JqDVZma-Q1HmyjoAvebWu9tvYydJYrB/view?usp=drivesdk" target="_blank">LINK HERE 🔗</a></td>
+      </tr>
+      <tr>
+        <td>🔍 Other Branch Subjects:</td>
+        <td><a href="https://drive.google.com/file/d/1_JXZMPwvAkCsfyAJRH_2QQLUJQ1B1uts/view?usp=drivesdk" target="_blank">LINK HERE 🔗</a></td>
+      </tr>
+    </table>
+</div>
+<script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('show');
+    }
+  </script>
+
+
+</body>
+</html>
