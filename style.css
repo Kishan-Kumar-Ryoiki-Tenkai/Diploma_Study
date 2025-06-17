@@ -38,12 +38,35 @@ body {
 
 .right-image img {
     width: 100%;
-    max-width: 600px;
+    max-width: 860px;
     height: auto;
     display: block;
     margin: 0 auto;
     border-radius: 15px;
   }
+
+@media (max-width: 1000px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .left-content,
+  .right-image {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .right-image img {
+    width: 90%;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+}
 
 .box {
   width: auto;
