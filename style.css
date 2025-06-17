@@ -37,11 +37,13 @@ body {
 }
 
 .right-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 15px;
+  }
 .box {
   width: auto;
   margin: auto 10px;
