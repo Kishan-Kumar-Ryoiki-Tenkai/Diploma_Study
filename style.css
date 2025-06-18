@@ -15,7 +15,7 @@ body {
 
 .container {
   display: flex;
-
+  align-item:center;
   justify-content: space-between;
   padding: 40px 40px;
   color: rgb(179, 163, 215);
