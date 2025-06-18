@@ -238,7 +238,7 @@ body {
 }
 
 /* Responsive for screen width ≤ 768px */
-@media (max-width: 1050px) {
+@media (max-width: 1200px) {
   .menu {
     display: none; /* Hidden by default */
     position: absolute;
