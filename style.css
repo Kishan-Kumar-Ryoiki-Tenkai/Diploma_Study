@@ -15,7 +15,7 @@ body {
 
 .container {
   display: flex;
-  align-items: center;
+
   justify-content: space-between;
   padding: 40px 40px;
   color: rgb(179, 163, 215);
@@ -27,7 +27,7 @@ body {
 }
 
 .adjust{
-  padding-left: 60%;
+  padding-left: 60%;  align-items: center;
 }
 
 .right-image {
@@ -63,15 +63,19 @@ body {
     width: 100%;
     max-width: inherit;
     height: auto;
-    margin: 0 auto;
+    margin: auto 6%;
     display: block;
-    
+  }
+
+  .right-image {
+    padding: 6%;
   }
 }
 
+
 .box {
   width: auto;
-  margin: auto 10px;
+  margin: auto 6%;
   border-style: outset;
   border-color: rgb(226, 76, 34);
   border-width: 5px;
@@ -85,8 +89,8 @@ body {
 .box p {
   width: auto;
   margin: auto 20px;
-  margin-top: 20px;
   margin-bottom: 20px;
+  margin-top: 20px;
   border-style: outset;
   border-color: rgb(226, 76, 34);
   border-width: 5px;
@@ -112,7 +116,7 @@ body {
 
 .about {
   width: auto;
-  margin: auto 20px;
+  margin: auto 6%;
   border-style: outset;
   border-color: rgb(226, 76, 34);
   border-width: 5px;
@@ -139,7 +143,7 @@ body {
   backdrop-filter: blur(8px);
 }
 
-/* ✅ Modern Marquee CSS */
+
 .marquee-container {
   overflow: hidden;
   white-space: nowrap;
@@ -233,6 +237,7 @@ body {
   background-color: #e04693;
 }
 
+/* Responsive for screen width ≤ 768px */
 @media (max-width: 1050px) {
   .menu {
     display: none; /* Hidden by default */
@@ -274,22 +279,33 @@ body {
   }
 }
 
+
 .project-section {
-  padding: 2rem;
+  padding: 6%;
 }
 
-@media (max-width: 1200px) {
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* Force max two cards per row up to 900px */
+@media (max-width: 1300px) {
   .project-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
+/* Force single column below 600px */
 @media (max-width: 900px) {
   .project-grid {
     grid-template-columns: 1fr;
   }
 }
 
+
+/* Card */
 .study-card {
   background: #fff;
   border-radius: 9px;
@@ -299,6 +315,7 @@ body {
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   transform: scale(1);
+  height: auto;
 }
 
 .study-card:hover {
@@ -306,6 +323,7 @@ body {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 
+/* Image */
 .notes-image {
   width: 70%;
   padding: auto;
@@ -366,7 +384,7 @@ body {
   color: white;
   text-decoration: none;
   border-radius: 4px;
-  font-size: 0.9rem;
+  font-size: 1rem;
   transition: background-color 0.3s ease;
 }
 
@@ -398,4 +416,6 @@ body {
   font-size: 20px;
   color: #d91010;
 }
+
+
 
